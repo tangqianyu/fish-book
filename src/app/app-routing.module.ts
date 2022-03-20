@@ -1,27 +1,24 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { PageNotFoundComponent } from './shared/components';
+import { AuthRoutingModule } from './pages/auth/auth-routing.module';
+import { PostModule } from './pages/post/post.module';
 
-import { HomeRoutingModule } from './home/home-routing.module';
-import { DetailRoutingModule } from './detail/detail-routing.module';
+
+
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'post-list',
     pathMatch: 'full'
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent
   }
 ];
 
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
-    HomeRoutingModule,
-    DetailRoutingModule
+    AuthRoutingModule,
+    PostModule
   ],
   exports: [RouterModule]
 })
