@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -16,8 +17,9 @@ import { AppComponent } from './app.component';
 
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
-import { PostModule } from './pages/post/post.module';
+
 import { AuthModule } from './pages/auth/auth.module';
+import { HomeModule } from './pages/home/home.module';
 
 
 // AoT requires an exported function for factories
@@ -27,11 +29,12 @@ const httpLoaderFactory = (http: HttpClient): TranslateHttpLoader => new Transla
   declarations: [AppComponent],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     HttpClientModule,
     CoreModule,
     SharedModule,
-    PostModule,
+    HomeModule,
     AuthModule,
     AppRoutingModule,
     TranslateModule.forRoot({

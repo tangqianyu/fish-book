@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
@@ -8,17 +7,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.less']
 })
 export class LoginComponent implements OnInit {
-  form: FormGroup
 
 
   constructor(
-    fb: FormBuilder,
     private router: Router
   ) {
-    this.form = fb.group({
-      account: [null, Validators.required],
-      password: [null, Validators.required],
-    });
+
   }
 
   ngOnInit() {

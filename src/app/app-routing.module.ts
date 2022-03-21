@@ -1,10 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthRoutingModule } from './pages/auth/auth-routing.module';
-import { PostModule } from './pages/post/post.module';
-
-
-
+import { HomeRoutingModule } from './pages/home/home-routing.module';
 
 const routes: Routes = [
   {
@@ -18,7 +15,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' }),
     AuthRoutingModule,
-    PostModule
+    HomeRoutingModule
   ],
   exports: [RouterModule]
 })
