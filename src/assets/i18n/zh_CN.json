@@ -1,0 +1,36 @@
+{
+  "PAGES": {
+    "LOGIN": {
+      "TITLE": "登录",
+      "HEADER": "Github授权登录",
+      "SKIP": "跳过登录",
+      "PROXY_SETTING": "代理设置"
+    },
+    "HOME": {
+      "MENU": {
+        "POST_LIST": "文章列表",
+        "POST_CREATE": "新建文章",
+        "SETTING": "设置"
+      }
+    },
+    "POST_LIST": {
+      "TITLE": "文章列表"
+    },
+    "POST_WRITE": {
+      "CREATE_TITLE": "新建文章",
+      "BUTTON_PUBLISH": "发布"
+    },
+    "SETTING": {
+      "TITLE": "设置",
+      "DISPLAY_LANGUAGE": "显示语言",
+      "PROXY_SETTING": "代理设置",
+      "PROXY_SERVER": "代理服务器",
+      "IMAGE_HOSTING_SETTING": "图床设置",
+      "SIGNOUT":"退出登录"
+    }
+  },
+  "APP": {
+    "NAME": "鱼书",
+    "DESCRIPTION":"你自己的笔记本！"
+  }
+}

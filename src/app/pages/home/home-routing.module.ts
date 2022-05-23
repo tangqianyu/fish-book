@@ -9,7 +9,7 @@ import { SettingComponent } from './setting/setting.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomeComponent,
     children: [
       {

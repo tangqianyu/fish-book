@@ -1,4 +1,4 @@
-import { app, BrowserWindow, screen, Menu, MenuItemConstructorOptions } from 'electron';
+import { app, BrowserWindow, screen, Menu, MenuItemConstructorOptions, ipcMain } from 'electron';
 import * as path from 'path';
 import * as fs from 'fs';
 import * as url from 'url';
@@ -17,8 +17,8 @@ function createWindow(): BrowserWindow {
 
   // Create the browser window.
   win = new BrowserWindow({
-    width: size.width * 0.8 | 0,
-    height: size.height * 0.8 | 0,
+    width: 368,
+    height: 400,
     webPreferences: {
       nodeIntegration: true,
       allowRunningInsecureContent: (serve) ? true : false,
@@ -27,6 +27,30 @@ function createWindow(): BrowserWindow {
   });
   const menu = Menu.buildFromTemplate(template)
   Menu.setApplicationMenu(menu)
+
+  ipcMain.on('resize-window', (event, width, height) => {
+    let browserWindow = BrowserWindow.fromWebContents(event.sender)
+    browserWindow.setSize(width, height)
+    browserWindow.center()
+  })
+
+  ipcMain.on('set-auth-size', (event) => {
+    const width = 368
+    const height = 400
+    let browserWindow = BrowserWindow.fromWebContents(event.sender)
+    browserWindow.setSize(width, height)
+    browserWindow.center()
+  })
+
+
+  ipcMain.on('set-normal-size', (event) => {
+    const width = size.width * 0.8 | 0
+    const height = size.height * 0.8 | 0
+    let browserWindow = BrowserWindow.fromWebContents(event.sender)
+    browserWindow.setSize(width, height)
+    browserWindow.center()
+  })
+
 
 
   if (serve) {

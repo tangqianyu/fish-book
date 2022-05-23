@@ -1,8 +1,15 @@
 <div nz-row nzJustify="center" nzAlign="middle" class="login-container">
-  <nz-card nzTitle="Welcome" class="login-form">
-    <button nz-button nzType="default" nzSize="large" nzShape="round">
-      <i nz-icon nzType="github"></i>
-      {{ 'PAGES.LOGIN.HEADER' | translate }}
-    </button>
-  </nz-card>
+    <div class="login-form">
+      <div class="g-flex-v-center">
+        <img class="logo" src="assets/icons/favicon.png" />
+        <h2 nz-typography>{{'APP.NAME' | translate}}</h2>
+        <h3 nz-typography>{{'APP.DESCRIPTION' | translate}}</h3>
+        <button nz-button nzType="primary" nzSize="large" nzShape="round">
+          <i nz-icon nzType="github"></i>
+          {{ 'PAGES.LOGIN.HEADER' | translate }}
+        </button>
+        <button class="skip" (click)="skip()"  nz-button nzType="link">{{ 'PAGES.LOGIN.SKIP' | translate }}</button>
+      </div>
+      <span class="setting" nz-typography nzType="secondary"> {{ 'PAGES.LOGIN.PROXY_SETTING' | translate }}</span>
+    </div>
 </div>

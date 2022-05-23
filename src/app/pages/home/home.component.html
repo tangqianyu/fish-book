@@ -1,10 +1,9 @@
 <nz-layout class="layout">
-  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" #slider>
-     <!-- <header-user></header-user> -->
-     <div *ngIf="!isCollapsed">
-        <header-user></header-user>
-     </div>
-    <ul nz-menu nzTheme="dark" nzMode="inline" [nzInlineCollapsed]="isCollapsed">
+  <nz-sider nzTheme="light">
+    <div>
+      <header-user></header-user>
+    </div>
+    <ul nz-menu nzTheme="light" nzMode="inline">
       <ng-container *ngFor="let menu of menus">
         <li nz-submenu nzOpen [nzTitle]="menu.text" [nzIcon]="menu.icon" *ngIf="menu.children">
           <ul>
@@ -23,15 +22,7 @@
     </ul>
   </nz-sider>
   <nz-layout>
-    <nz-header class="g-flex-h-center">
-      <i class="trigger" nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"
-        (click)="handleTriggerClick()"></i>
-      <ul class="qy-nav g-flex-h-center">
-        <li class="g-flex-center hide-mobile">
 
-        </li>
-      </ul>
-    </nz-header>
     <nz-content>
       <div class="inner-content">
         <router-outlet></router-outlet>

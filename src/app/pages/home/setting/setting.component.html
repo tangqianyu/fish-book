@@ -1,3 +1,22 @@
-<p>
-  setting works!
-</p>
+<page-header [title]="'PAGES.SETTING.TITLE' |translate"></page-header>
+
+<nz-list>
+  <nz-list-item>
+    <span>{{'PAGES.SETTING.DISPLAY_LANGUAGE'|translate}}</span>
+    <nz-select [ngModel]="language" (ngModelChange)="changeLang($event)">
+      <nz-option nzValue="en_US" nzLabel="English"></nz-option>
+      <nz-option nzValue="zh_CN" nzLabel="简体中文"></nz-option>
+    </nz-select>
+  </nz-list-item>
+  <nz-list-item>
+    <span>{{'PAGES.SETTING.PROXY_SETTING'|translate}}</span>
+    <nz-switch [(ngModel)]="proxyEnable"></nz-switch>
+  </nz-list-item>
+  <nz-list-item>
+    <span>{{'PAGES.SETTING.IMAGE_HOSTING_SETTING'|translate}}</span>
+  </nz-list-item>
+</nz-list>
+
+<div class="g-flex-center">
+  <button (click)="signout()" nz-button nzType="dashed" nzDanger  nzSize="large" style="margin-top: 30px;">{{'PAGES.SETTING.SIGNOUT'|translate}}</button>
+</div>

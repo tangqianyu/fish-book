@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/naming-convention */
 import { Injectable } from '@angular/core';
 
 // If you import a module but never use any of the imported values other than as TypeScript types,
@@ -14,6 +15,10 @@ export class ElectronService {
   webFrame: typeof webFrame;
   childProcess: typeof childProcess;
   fs: typeof fs;
+
+  ipcMessage = {
+    RESIZE_WINDOW: 'resize-window'
+  };
 
   constructor() {
     // Conditional imports
@@ -41,6 +46,24 @@ export class ElectronService {
 
   get isElectron(): boolean {
     return !!(window && window.process && window.process.type);
+  }
+
+  changeWindowSize(width: number, height: number) {
+    if (this.isElectron) {
+      this.ipcRenderer.send('resize-window', width, height);
+    }
+  }
+
+  setNormalSize() {
+    if (this.isElectron) {
+      this.ipcRenderer.send('set-normal-size');
+    }
+  }
+
+  setAuthSize() {
+    if (this.isElectron) {
+      this.ipcRenderer.send('set-auth-size');
+    }
   }
 
 

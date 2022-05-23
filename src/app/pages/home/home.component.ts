@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NzSiderComponent } from "ng-zorro-antd/layout";
+import { ElectronService } from '../../core/services';
+// import { NzSiderComponent } from "ng-zorro-antd/layout";
 import { Menu } from '../../models/menu.model';
 
 @Component({
@@ -8,8 +9,6 @@ import { Menu } from '../../models/menu.model';
   styleUrls: ['./home.component.less']
 })
 export class HomeComponent implements OnInit {
-
-  isCollapsed = false;
   menus: Menu[] = [
     {
       text: 'PAGES.HOME.MENU.POST_LIST',
@@ -27,39 +26,17 @@ export class HomeComponent implements OnInit {
       icon: 'setting',
       link: 'setting',
     }
-  ]
+  ];
 
-  @ViewChild('slider') sliderRef!: NzSiderComponent
-
-
-  constructor() {
+  constructor(
+    private electronService: ElectronService
+  ) {
   }
 
   ngOnInit() {
-
-  }
-
-  ngAfterViewInit() {
-    setTimeout(() => {
-      this.setCollapsedWidth();
-    }, 0)
-    window.addEventListener("resize", () => {
-      this.setCollapsedWidth();
-    });
-  }
-
-  setCollapsedWidth() {
-    if (document.documentElement.clientWidth <= 767) {
-      this.isCollapsed = true;
-      this.sliderRef.nzCollapsedWidth = 0;
-    } else {
-      this.sliderRef.nzCollapsedWidth = 80;
-    }
+    this.electronService.setNormalSize();
   }
 
 
-  handleTriggerClick() {
-    this.isCollapsed = !this.isCollapsed;
-  }
 
 }

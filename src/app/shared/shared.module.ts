@@ -6,10 +6,11 @@ import { SHARED_ZORRO_MODULES } from './shared-zorro.module';
 
 import { WebviewDirective } from './directives/';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 @NgModule({
   declarations: [WebviewDirective],
-  imports: [CommonModule, TranslateModule, FormsModule, ReactiveFormsModule],
-  exports: [TranslateModule, WebviewDirective, FormsModule, ReactiveFormsModule, SHARED_ZORRO_MODULES]
+  imports: [CommonModule, TranslateModule, FormsModule, ReactiveFormsModule, SHARED_ZORRO_MODULES, EditorModule],
+  exports: [TranslateModule, WebviewDirective, FormsModule, ReactiveFormsModule,EditorModule, SHARED_ZORRO_MODULES]
 })
 export class SharedModule { }

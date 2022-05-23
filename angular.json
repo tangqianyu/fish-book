@@ -31,13 +31,16 @@
                 "glob": "**/*",
                 "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
                 "output": "/assets/"
-              }
+              },
+              { "glob": "**/*", "input": "./node_modules/tinymce/", "output": "/tinymce/" }
             ],
             "styles": [
               "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.less"
             ],
-            "scripts": [],
+            "scripts": [
+              "node_modules/tinymce/tinymce.min.js"
+            ],
             "customWebpackConfig": {
               "path": "./angular.webpack.js",
               "replaceDuplicatePlugins": true

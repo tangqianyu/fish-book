@@ -1,15 +1,27 @@
 .login-container {
   height: 100%;
-  background: url('../../../../assets/login-bg.png') no-repeat;
-  background-size: cover;
 
   .login-form {
     width: 368px;
-  }
-
-  nz-card {
+    position: relative;
     opacity: 0.65;
     text-align: center;
+
+    .logo {
+      width: 60px;
+      height: 60px;
+    }
+
+    .setting {
+      position: absolute;
+      bottom: 0;
+      right: 10px;
+      cursor: pointer;
+    }
+
+    .skip{
+      margin: 10px 0 20px 0;
+    }
   }
 
   @media (max-width: 368px) {

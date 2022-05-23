@@ -1,3 +1,7 @@
-<p>
-  post-write works!
-</p>
+<page-header [title]="title |translate">
+  <button nz-button nzType="primary">{{'PAGES.POST_WRITE.BUTTON_PUBLISH' |translate}}</button>
+</page-header>
+<editor
+    [(ngModel)]="content"
+    [init]="tinyConfig"
+></editor>

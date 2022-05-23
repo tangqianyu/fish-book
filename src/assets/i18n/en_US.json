@@ -1,0 +1,36 @@
+{
+  "PAGES": {
+    "LOGIN": {
+      "TITLE": "Login",
+      "HEADER": "Sigh in with Github",
+      "SKIP": "Skip sign in",
+      "PROXY_SETTING": "Proxy Settings"
+    },
+    "HOME": {
+      "MENU": {
+        "POST_LIST": "Post List",
+        "POST_CREATE": "Post Create",
+        "SETTING": "Settings"
+      }
+    },
+    "POST_LIST": {
+      "TITLE": "Post List"
+    },
+    "POST_WRITE": {
+      "CREATE_TITLE": "Post Create",
+      "BUTTON_PUBLISH": "Publish"
+    },
+    "SETTING": {
+      "TITLE": "Settings",
+      "DISPLAY_LANGUAGE": "Display language",
+      "PROXY_SETTING": "Proxy Settings",
+      "PROXY_SERVER": "Proxy Server",
+      "IMAGE_HOSTING_SETTING": "Image Hosting Settings",
+      "SIGNOUT":"Sign out"
+    }
+  },
+  "APP": {
+    "NAME": "Fish Book",
+    "DESCRIPTION":"Your own notebook!"
+  }
+}

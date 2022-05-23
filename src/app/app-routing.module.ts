@@ -6,7 +6,7 @@ import { HomeRoutingModule } from './pages/home/home-routing.module';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'post-list',
+    redirectTo: 'login',
     pathMatch: 'full'
   }
 ];
