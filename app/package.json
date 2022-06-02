@@ -1,6 +1,6 @@
 {
-  "name": "fish-book",
-  "version": "10.5.0",
+  "name": "FishBook",
+  "version": "1.0.0",
   "main": "main.js",
   "private": true,
   "dependencies": {}

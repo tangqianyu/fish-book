@@ -25,6 +25,9 @@ function createWindow(): BrowserWindow {
       contextIsolation: false,  // false if you want to run e2e test with Spectron
     },
   });
+
+  win.setResizable(false)
+
   const menu = Menu.buildFromTemplate(template)
   Menu.setApplicationMenu(menu)
 

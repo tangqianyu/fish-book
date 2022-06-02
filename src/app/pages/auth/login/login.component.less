@@ -3,23 +3,33 @@
 
   .login-form {
     width: 368px;
-    position: relative;
     opacity: 0.65;
     text-align: center;
+    height: 100%;
 
     .logo {
       width: 60px;
       height: 60px;
     }
 
-    .setting {
-      position: absolute;
-      bottom: 0;
-      right: 10px;
-      cursor: pointer;
+    .setting-container {
+      width: 100%;
+      display: flex;
+      flex: 1;
+      justify-content: right;
+      align-items: center;
+      padding-right: 20px;
+
+      .setting {
+        bottom: 0;
+        right: 10px;
+        cursor: pointer;
+      }
     }
 
-    .skip{
+
+
+    .skip {
       margin: 10px 0 20px 0;
     }
   }
