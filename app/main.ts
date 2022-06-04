@@ -42,6 +42,7 @@ function createWindow(): BrowserWindow {
     const height = 400
     let browserWindow = BrowserWindow.fromWebContents(event.sender)
     browserWindow.setSize(width, height)
+    browserWindow.setResizable(false)
     browserWindow.center()
   })
 
@@ -51,6 +52,7 @@ function createWindow(): BrowserWindow {
     const height = size.height * 0.8 | 0
     let browserWindow = BrowserWindow.fromWebContents(event.sender)
     browserWindow.setSize(width, height)
+    browserWindow.setResizable(true)
     browserWindow.center()
   })
 

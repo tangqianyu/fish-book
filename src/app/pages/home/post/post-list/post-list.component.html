@@ -1,1 +1,28 @@
 <page-header [title]="'PAGES.POST_LIST.TITLE' |translate"></page-header>
+<nz-table #basicTable [nzData]="postList">
+  <thead>
+    <tr>
+      <th>{{'POST.TITLE' |translate}}</th>
+      <th>{{'POST.CONTENT' |translate}}</th>
+      <th>{{'POST.TAG' |translate}}</th>
+      <th>{{'POST.CATEGORY' |translate}}</th>
+      <th>{{'POST.CREATE_TIME' |translate}}</th>
+      <th>{{'POST.UPDATE_TIME' |translate}}</th>
+      <th>{{'NORMAL.ACTION' |translate}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{data.title}}</td>
+      <td>{{data.content}}</td>
+      <td>{{data.tag}}</td>
+      <td>{{data.category}}</td>
+      <td>{{data.createdAt}}</td>
+      <td>{{data.updatedAt}}</td>
+      <td>
+        <a>{{'NORMAL.MODIFY' |translate}}</a>
+        <a>{{'NORMAL.Delete' |translate}}</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

@@ -3,6 +3,12 @@
     <div>
       <header-user></header-user>
     </div>
+    <div class="create-container">
+      <button nz-button nzType="dashed" nzSize="large" style="width: 100%;" (click)="create()">
+        <i nz-icon nzType="plus"></i>
+        {{ 'PAGES.HOME.CREATE' |translate }}
+      </button>
+    </div>
     <ul nz-menu nzTheme="light" nzMode="inline">
       <ng-container *ngFor="let menu of menus">
         <li nz-submenu nzOpen [nzTitle]="menu.text" [nzIcon]="menu.icon" *ngIf="menu.children">

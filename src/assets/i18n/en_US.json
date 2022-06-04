@@ -10,8 +10,11 @@
       "MENU": {
         "POST_LIST": "Post List",
         "POST_CREATE": "Post Create",
+        "TAGS": "Tags",
+        "CATEGORIES":"Categories",
         "SETTING": "Settings"
-      }
+      },
+      "CREATE": "Create"
     },
     "POST_LIST": {
       "TITLE": "Post List"
@@ -23,14 +26,29 @@
     "SETTING": {
       "TITLE": "Settings",
       "DISPLAY_LANGUAGE": "Display language",
-      "PROXY_SETTING": "Proxy Settings",
+      "ENABLE_PROXY": "Enable Proxy",
       "PROXY_SERVER": "Proxy Server",
-      "IMAGE_HOSTING_SETTING": "Image Hosting Settings",
-      "SIGNOUT":"Sign out"
+      "ENABLE_IMAGE_HOSTING": "Enable Image Hosting",
+      "IMAGE_HOSTING_SERVER": "Image Hosting Server",
+      "IMAGE_HOSTING_TIPS": "only support Github",
+      "SIGNOUT": "Sign out"
     }
   },
   "APP": {
     "NAME": "Fish Book",
-    "DESCRIPTION":"Your own notebook!"
+    "DESCRIPTION": "Your own notebook!"
+  },
+  "NORMAL": {
+    "MODIFY": "Modify",
+    "DELETE": "Delete",
+    "ACTION": "Action"
+  },
+  "POST": {
+    "TITLE": "Title",
+    "CONTENT": "Content",
+    "TAG": "Tag",
+    "CATEGORY": "Category",
+    "CREATE_TIME": "Create Time",
+    "UPDATE_TIME": "Update Time"
   }
 }

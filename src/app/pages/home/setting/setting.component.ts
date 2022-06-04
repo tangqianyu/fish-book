@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { en_US, zh_CN, NzI18nService } from 'ng-zorro-antd/i18n';
@@ -11,11 +11,16 @@ import { en_US, zh_CN, NzI18nService } from 'ng-zorro-antd/i18n';
 export class SettingComponent implements OnInit {
   language!: string;
   proxyEnable = false;
+  proxyAddress = '';
+  imageHostingEnable = false;
+  imageHostingAddress = '';
+  accessToken = '';
+
 
   constructor(
     private router: Router,
     private translate: TranslateService,
-    private i18n: NzI18nService
+    private i18n: NzI18nService,
   ) { }
 
   ngOnInit() {
@@ -37,8 +42,9 @@ export class SettingComponent implements OnInit {
 
   }
 
-  signout(){
+  signout() {
     this.router.navigate(['/login']);
   }
+
 
 }

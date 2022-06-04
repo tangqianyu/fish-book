@@ -8,15 +8,38 @@
       <nz-option nzValue="zh_CN" nzLabel="简体中文"></nz-option>
     </nz-select>
   </nz-list-item>
-  <nz-list-item>
-    <span>{{'PAGES.SETTING.PROXY_SETTING'|translate}}</span>
+  <nz-list-item [class.no-border]="proxyEnable">
+    <span>{{'PAGES.SETTING.ENABLE_PROXY'|translate}}</span>
     <nz-switch [(ngModel)]="proxyEnable"></nz-switch>
   </nz-list-item>
-  <nz-list-item>
-    <span>{{'PAGES.SETTING.IMAGE_HOSTING_SETTING'|translate}}</span>
+  <ng-container *ngIf="proxyEnable">
+    <nz-list-item>
+      <span>{{'PAGES.SETTING.PROXY_SERVER'|translate}}</span>
+      <p nz-typography nzEditable [(nzContent)]="proxyAddress"></p>
+    </nz-list-item>
+  </ng-container>
+  <nz-list-item [class.no-border]="imageHostingEnable">
+    <span>{{'PAGES.SETTING.ENABLE_IMAGE_HOSTING'|translate}}</span>
+    <nz-switch [(ngModel)]="imageHostingEnable"></nz-switch>
   </nz-list-item>
+  <ng-container *ngIf="imageHostingEnable">
+    <nz-list-item>
+      <span>{{'PAGES.SETTING.IMAGE_HOSTING_SERVER'|translate}} ({{'PAGES.SETTING.IMAGE_HOSTING_TIPS'|translate}})</span>
+      <p nz-typography nzEditable [(nzContent)]="imageHostingAddress"></p>
+    </nz-list-item>
+    <nz-list-item>
+      <span>Access Token</span>
+      <p nz-typography nzEditable [(nzContent)]="accessToken"></p>
+    </nz-list-item>
+  </ng-container>
 </nz-list>
 
 <div class="g-flex-center">
-  <button (click)="signout()" nz-button nzType="dashed" nzDanger  nzSize="large" style="margin-top: 30px;">{{'PAGES.SETTING.SIGNOUT'|translate}}</button>
+  <button (click)="signout()" nz-button nzType="dashed" nzDanger nzSize="large"
+    style="margin-top: 30px;">{{'PAGES.SETTING.SIGNOUT'|translate}}</button>
 </div>
+
+
+<ng-template #proxyContent>
+  <input nz-input [(ngModel)]="proxyAddress" />
+</ng-template>

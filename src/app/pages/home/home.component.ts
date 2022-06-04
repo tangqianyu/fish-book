@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { ElectronService } from '../../core/services';
 // import { NzSiderComponent } from "ng-zorro-antd/layout";
 import { Menu } from '../../models/menu.model';
@@ -16,9 +17,14 @@ export class HomeComponent implements OnInit {
       link: 'post-list',
     },
     {
-      text: 'PAGES.HOME.MENU.POST_CREATE',
-      icon: 'edit',
-      link: 'post-create',
+      text: 'PAGES.HOME.MENU.TAGS',
+      icon: 'tags',
+      link: 'tags',
+    },
+    {
+      text: 'PAGES.HOME.MENU.CATEGORIES',
+      icon: 'bars',
+      link: 'categorys',
     },
 
     {
@@ -29,7 +35,8 @@ export class HomeComponent implements OnInit {
   ];
 
   constructor(
-    private electronService: ElectronService
+    private electronService: ElectronService,
+    private router: Router
   ) {
   }
 
@@ -37,6 +44,9 @@ export class HomeComponent implements OnInit {
     this.electronService.setNormalSize();
   }
 
+  create() {
+    this.router.navigate(['home/post-create']);
+  }
 
 
 }

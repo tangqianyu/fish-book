@@ -10,8 +10,11 @@
       "MENU": {
         "POST_LIST": "文章列表",
         "POST_CREATE": "新建文章",
+        "TAGS": "标签",
+        "CATEGORIES": "类别",
         "SETTING": "设置"
-      }
+      },
+      "CREATE": "新建"
     },
     "POST_LIST": {
       "TITLE": "文章列表"
@@ -23,14 +26,29 @@
     "SETTING": {
       "TITLE": "设置",
       "DISPLAY_LANGUAGE": "显示语言",
-      "PROXY_SETTING": "代理设置",
+      "ENABLE_PROXY": "启用代理",
       "PROXY_SERVER": "代理服务器",
-      "IMAGE_HOSTING_SETTING": "图床设置",
-      "SIGNOUT":"退出登录"
+      "ENABLE_IMAGE_HOSTING": "启用图床",
+      "IMAGE_HOSTING_SERVER": "图床服务器",
+      "IMAGE_HOSTING_TIPS": "只支持Github",
+      "SIGNOUT": "退出登录"
     }
   },
   "APP": {
     "NAME": "鱼书",
-    "DESCRIPTION":"你自己的笔记本！"
+    "DESCRIPTION": "你自己的笔记本！"
+  },
+  "NORMAL": {
+    "MODIFY": "编辑",
+    "DELETE": "删除",
+    "ACTION": "操作"
+  },
+  "POST": {
+    "TITLE": "标题",
+    "CONTENT": "内容",
+    "TAG": "标签",
+    "CATEGORY": "类别",
+    "CREATE_TIME": "创建时间",
+    "UPDATE_TIME": "更新时间"
   }
 }
