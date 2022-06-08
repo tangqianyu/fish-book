@@ -5,6 +5,8 @@ import { HomeComponent } from './home.component';
 import { PostListComponent } from './post/post-list/post-list.component';
 import { PostWriteComponent } from './post/post-write/post-write.component';
 import { SettingComponent } from './setting/setting.component';
+import { TagsComponent } from './tags/tags.component';
+import { CategorysComponent } from './categorys/categorys.component';
 
 
 const routes: Routes = [
@@ -20,6 +22,14 @@ const routes: Routes = [
       {
         path: 'post-list',
         component: PostListComponent,
+      },
+      {
+        path: 'tags',
+        component: TagsComponent,
+      },
+      {
+        path: 'categorys',
+        component: CategorysComponent,
       },
       {
         path: 'post-create',

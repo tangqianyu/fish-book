@@ -154,7 +154,7 @@ export class PostWriteComponent implements OnInit {
 
     this.postForm = this.fb.group({
       title: [null],
-      tag: [null],
+      tags: [null],
       category: [null]
     });
   }

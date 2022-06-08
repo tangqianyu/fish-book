@@ -42,8 +42,8 @@ export class SettingComponent implements OnInit {
 
   }
 
-  signout() {
-    this.router.navigate(['/login']);
+  save() {
+
   }
 
 

@@ -7,9 +7,20 @@ import { PostListComponent } from './post/post-list/post-list.component';
 import { PostWriteComponent } from './post/post-write/post-write.component';
 import { HeaderUserComponent, PageHeaderComponent } from './components';
 import { SettingComponent } from './setting/setting.component';
+import { TagsComponent } from './tags/tags.component';
+import { CategorysComponent } from './categorys/categorys.component';
 
 @NgModule({
-  declarations: [HomeComponent, PostListComponent, PostWriteComponent, SettingComponent, HeaderUserComponent, PageHeaderComponent],
+  declarations: [
+    HomeComponent,
+    PostListComponent,
+    PostWriteComponent,
+    TagsComponent,
+    CategorysComponent,
+    SettingComponent,
+    HeaderUserComponent,
+    PageHeaderComponent
+  ],
   imports: [CommonModule, SharedModule, HomeRoutingModule],
 })
 export class HomeModule { }

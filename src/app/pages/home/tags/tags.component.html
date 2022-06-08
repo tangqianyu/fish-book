@@ -1,0 +1,24 @@
+<page-header [title]="'PAGES.TAGS.TITLE' |translate"></page-header>
+<nz-table #basicTable [nzData]="tags">
+  <thead>
+    <tr>
+      <th>{{'TAG.NAME' |translate}}</th>
+      <th>{{'TAG.COLOR' |translate}}</th>
+      <th>{{'NORMAL.ACTION' |translate}}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of basicTable.data">
+      <td>{{data.name}}</td>
+      <td>
+        <div *ngIf="!data.color" class="border-cilcle"></div>
+        <div *ngIf="data.color" class="color-circle" [style.background-color]="data.color"></div>
+      </td>
+      <td>
+        <a>{{'NORMAL.MODIFY' |translate}}</a>
+        <nz-divider nzType="vertical"></nz-divider>
+        <a nz-typography nzType="danger">{{'NORMAL.DELETE' |translate}}</a>
+      </td>
+    </tr>
+  </tbody>
+</nz-table>

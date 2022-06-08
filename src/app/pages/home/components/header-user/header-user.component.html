@@ -1,4 +1,17 @@
-<div class="header-user g-flex-h-center">
-  <nz-avatar nzSrc="" [nzSize]="40"></nz-avatar>
-  <span>发财鱼</span>
+<div class="header-user g-flex-h-center-b">
+  <div>
+    <nz-avatar nzSrc="assets/icons/favicon-gray.jpg" [nzSize]="40"></nz-avatar>
+    <span>Fish</span>
+  </div>
+  <div>
+    <a nz-dropdown nzPlacement="bottomRight" nzTrigger="click" [nzDropdownMenu]="menu">
+      <i class="more" nz-icon nzType="more" nzTheme="outline"></i>
+    </a>
+    <nz-dropdown-menu #menu="nzDropdownMenu">
+      <ul nz-menu>
+        <li nz-menu-item>{{'PAGES.SETTING.ABOUT'|translate}}</li>
+        <li (click)="signout()" nz-menu-item>{{'PAGES.SETTING.SIGNOUT'|translate}}</li>
+      </ul>
+    </nz-dropdown-menu>
+  </div>
 </div>

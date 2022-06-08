@@ -23,7 +23,7 @@
     <nz-switch [(ngModel)]="imageHostingEnable"></nz-switch>
   </nz-list-item>
   <ng-container *ngIf="imageHostingEnable">
-    <nz-list-item>
+    <nz-list-item class="no-border">
       <span>{{'PAGES.SETTING.IMAGE_HOSTING_SERVER'|translate}} ({{'PAGES.SETTING.IMAGE_HOSTING_TIPS'|translate}})</span>
       <p nz-typography nzEditable [(nzContent)]="imageHostingAddress"></p>
     </nz-list-item>
@@ -35,8 +35,8 @@
 </nz-list>
 
 <div class="g-flex-center">
-  <button (click)="signout()" nz-button nzType="dashed" nzDanger nzSize="large"
-    style="margin-top: 30px;">{{'PAGES.SETTING.SIGNOUT'|translate}}</button>
+  <button (click)="save()" nz-button nzType="primary" nzSize="large"
+    style="margin-top: 30px;">{{'PAGES.SETTING.SAVE'|translate}}</button>
 </div>
 
 

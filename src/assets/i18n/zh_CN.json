@@ -23,6 +23,9 @@
       "CREATE_TITLE": "新建文章",
       "BUTTON_PUBLISH": "发布"
     },
+    "TAGS": {
+      "TITLE": "标签"
+    },
     "SETTING": {
       "TITLE": "设置",
       "DISPLAY_LANGUAGE": "显示语言",
@@ -31,6 +34,8 @@
       "ENABLE_IMAGE_HOSTING": "启用图床",
       "IMAGE_HOSTING_SERVER": "图床服务器",
       "IMAGE_HOSTING_TIPS": "只支持Github",
+      "ABOUT": "关于我们",
+      "SAVE": "保存设置",
       "SIGNOUT": "退出登录"
     }
   },
@@ -46,9 +51,13 @@
   "POST": {
     "TITLE": "标题",
     "CONTENT": "内容",
-    "TAG": "标签",
+    "TAGS": "标签",
     "CATEGORY": "类别",
     "CREATE_TIME": "创建时间",
     "UPDATE_TIME": "更新时间"
+  },
+  "TAG": {
+    "NAME": "名称",
+    "COLOR": "颜色"
   }
 }
