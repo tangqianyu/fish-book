@@ -6,7 +6,8 @@ import { PostListComponent } from './post/post-list/post-list.component';
 import { PostWriteComponent } from './post/post-write/post-write.component';
 import { SettingComponent } from './setting/setting.component';
 import { TagsComponent } from './tags/tags.component';
-import { CategorysComponent } from './categorys/categorys.component';
+import { CategorysComponent } from './categories/categories.component';
+import { DraftsComponent } from './drafts/drafts.component';
 
 
 const routes: Routes = [
@@ -28,8 +29,12 @@ const routes: Routes = [
         component: TagsComponent,
       },
       {
-        path: 'categorys',
+        path: 'categories',
         component: CategorysComponent,
+      },
+      {
+        path: 'drafts',
+        component: DraftsComponent,
       },
       {
         path: 'post-create',

@@ -12,6 +12,7 @@
         "POST_CREATE": "Post Create",
         "TAGS": "Tags",
         "CATEGORIES": "Categories",
+        "DRAFTS": "Drafts",
         "SETTING": "Settings"
       },
       "CREATE": "Create"
@@ -26,9 +27,13 @@
     "TAGS": {
       "TITLE": "Tags"
     },
+    "CATEGORIES": {
+      "TITLE": "Categories"
+    },
     "SETTING": {
       "TITLE": "Settings",
       "DISPLAY_LANGUAGE": "Display language",
+      "ABOUT_US": "About Us",
       "ENABLE_PROXY": "Enable Proxy",
       "PROXY_SERVER": "Proxy Server",
       "ENABLE_IMAGE_HOSTING": "Enable Image Hosting",
@@ -51,7 +56,7 @@
   "POST": {
     "TITLE": "Title",
     "CONTENT": "Content",
-    "TAGS": "Tag",
+    "TAGS": "Tags",
     "CATEGORY": "Category",
     "CREATE_TIME": "Create Time",
     "UPDATE_TIME": "Update Time"

@@ -1,7 +1,7 @@
 /* eslint-disable max-len */
 /* eslint-disable @typescript-eslint/naming-convention */
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { APP_CONFIG } from '../../../../../environments/environment';
@@ -21,12 +21,14 @@ export class PostWriteComponent implements OnInit {
     language_url: 'assets/tinymce/langs/zh_CN.js',
     base_url: APP_CONFIG.production ? './tinymce/' : '/tinymce/',
     suffix: '.min',
-    plugins: 'preview importcss searchreplace autolink autosave save directionality visualblocks visualchars fullscreen image link media template codesample table charmap pagebreak nonbreaking anchor  insertdatetime advlist lists wordcount help charmap quickbars emoticons',
+    plugins: 'preview importcss searchreplace autoresize  autolink autosave save directionality visualblocks visualchars fullscreen image link media template codesample table charmap pagebreak nonbreaking anchor  insertdatetime advlist lists wordcount help charmap emoticons',
+    autoresize_overflow_padding: 50,
     menubar: '',
-    toolbar: 'undo redo removeformat | formatselect fontsizeselect bold italic strikethrough underline | forecolor backcolor | alignleft aligncenter alignright alignjustify | numlist bullist | outdent indent lineheight | charmap emoticons | fullscreen  preview | image media template link blockquote anchor codesample | ltr rtl',
+    toolbar: 'undo redo removeformat | blocks fontsize bold italic strikethrough underline | forecolor backcolor | alignleft aligncenter alignright alignjustify | numlist bullist | outdent indent lineheight | charmap emoticons | fullscreen  preview | image media template link blockquote anchor codesample | ltr rtl',
+    images_upload_url: 'postAcceptor.php',
+    a11y_advanced_options: true,
     statusbar: false,
-    height: 650,
-    fontsize_formats: '12px 14px 16px 18px 24px 36px 48px 56px 72px',
+    font_size_formats: '12px 13px 14px 15px 16px 19px 22px 24px 29px 32px 40px 48px',
     codesample_languages: [
       { text: 'HTML/XML', value: 'markup' },
       { text: 'XML', value: 'xml' },
@@ -153,10 +155,16 @@ export class PostWriteComponent implements OnInit {
     this.type = this.route.snapshot.data.type;
 
     this.postForm = this.fb.group({
-      title: [null],
+      title: [null,[Validators.required]],
       tags: [null],
-      category: [null]
+      category: [null,[Validators.required]]
     });
   }
+
+  publish() {
+    console.log(this.content);
+    console.log(this.postForm.value);
+  }
+
 
 }

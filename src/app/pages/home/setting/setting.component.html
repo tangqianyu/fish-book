@@ -9,37 +9,11 @@
     </nz-select>
   </nz-list-item>
   <nz-list-item [class.no-border]="proxyEnable">
-    <span>{{'PAGES.SETTING.ENABLE_PROXY'|translate}}</span>
-    <nz-switch [(ngModel)]="proxyEnable"></nz-switch>
+    <span>{{'PAGES.SETTING.ABOUT_US'|translate}}</span>
   </nz-list-item>
-  <ng-container *ngIf="proxyEnable">
-    <nz-list-item>
-      <span>{{'PAGES.SETTING.PROXY_SERVER'|translate}}</span>
-      <p nz-typography nzEditable [(nzContent)]="proxyAddress"></p>
-    </nz-list-item>
-  </ng-container>
-  <nz-list-item [class.no-border]="imageHostingEnable">
-    <span>{{'PAGES.SETTING.ENABLE_IMAGE_HOSTING'|translate}}</span>
-    <nz-switch [(ngModel)]="imageHostingEnable"></nz-switch>
-  </nz-list-item>
-  <ng-container *ngIf="imageHostingEnable">
-    <nz-list-item class="no-border">
-      <span>{{'PAGES.SETTING.IMAGE_HOSTING_SERVER'|translate}} ({{'PAGES.SETTING.IMAGE_HOSTING_TIPS'|translate}})</span>
-      <p nz-typography nzEditable [(nzContent)]="imageHostingAddress"></p>
-    </nz-list-item>
-    <nz-list-item>
-      <span>Access Token</span>
-      <p nz-typography nzEditable [(nzContent)]="accessToken"></p>
-    </nz-list-item>
-  </ng-container>
 </nz-list>
 
 <div class="g-flex-center">
   <button (click)="save()" nz-button nzType="primary" nzSize="large"
     style="margin-top: 30px;">{{'PAGES.SETTING.SAVE'|translate}}</button>
 </div>
-
-
-<ng-template #proxyContent>
-  <input nz-input [(ngModel)]="proxyAddress" />
-</ng-template>

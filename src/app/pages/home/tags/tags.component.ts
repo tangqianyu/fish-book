@@ -8,24 +8,19 @@ import { Component, OnInit } from '@angular/core';
 export class TagsComponent implements OnInit {
   tags = [
     {
-      name: 'Default',
-      color: ''
+      name: 'Default'
     },
     {
-      name: 'Red',
-      color: 'red'
+      name: 'Red'
     },
     {
-      name: 'Orange',
-      color: 'orange'
+      name: 'Orange'
     },
     {
-      name: 'Yellow',
-      color: 'yellow'
+      name: 'Yellow'
     },
     {
-      name: 'Green',
-      color: 'green'
+      name: 'Green'
     }
   ];
   constructor() { }

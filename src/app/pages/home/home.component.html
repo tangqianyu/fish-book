@@ -4,23 +4,42 @@
       <header-user></header-user>
     </div>
     <div class="create-container">
-      <button nz-button nzType="dashed" nzSize="large" style="width: 100%;" (click)="create()">
+      <button nz-dropdown nz-button nzPlacement="bottomRight" nzTrigger="hover" [nzDropdownMenu]="menu" nzType="dashed"
+        nzSize="large" style="width: 100%;">
         <i nz-icon nzType="plus"></i>
         {{ 'PAGES.HOME.CREATE' |translate }}
       </button>
+
+      <nz-dropdown-menu #menu="nzDropdownMenu">
+        <ul nz-menu>
+          <li class="g-flex-h-center menu-item" nz-menu-item>
+            <i class="menu-item-icon" nz-icon nzIconfont="icon-post" ></i>
+            <span>Post</span>
+          </li>
+          <li class="g-flex-h-center menu-item" nz-menu-item>
+            <i class="menu-item-icon" nz-icon nzType="tag" nzTheme="fill" style="color: #ff4d4f"></i>
+            <span>Tag</span>
+          </li>
+          <li class="g-flex-h-center menu-item" nz-menu-item>
+            <i class="menu-item-icon" nz-icon nzType="tag" nzTheme="fill" style="color: #ff4d4f"></i>
+            <span>Category</span>
+          </li>
+        </ul>
+      </nz-dropdown-menu>
+
     </div>
     <ul nz-menu nzTheme="light" nzMode="inline">
       <ng-container *ngFor="let menu of menus">
-        <li nz-submenu nzOpen [nzTitle]="menu.text" [nzIcon]="menu.icon" *ngIf="menu.children">
+        <!-- <li nz-submenu nzOpen [nzTitle]="menu.text" [nzIcon]="menu.icon" *ngIf="menu.children">
           <ul>
             <li nz-menu-item *ngFor="let subMenu of menu.children" nzMatchRouter [routerLink]="subMenu.link">
               {{ subMenu.text |translate }}
             </li>
           </ul>
-        </li>
+        </li> -->
 
         <li nz-menu-item *ngIf="!menu.children" nzMatchRouter [routerLink]="menu.link">
-          <i nz-icon [nzType]="menu.icon" *ngIf="menu.icon"></i>
+          <i nz-icon [nzIconfont]="menu.icon" *ngIf="menu.icon"></i>
           <span>{{ menu.text | translate }}</span>
         </li>
       </ng-container>

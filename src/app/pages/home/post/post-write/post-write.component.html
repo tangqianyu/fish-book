@@ -1,45 +1,48 @@
-<nz-page-header>
-  <nz-page-header-title>
-    <i nz-icon nzType="clock-circle" nzTheme="outline" style="margin-right: 5px;"></i> Saved at: 2022-06-04 21:37:07
-  </nz-page-header-title>
-  <nz-page-header-footer>
-  </nz-page-header-footer>
-  <nz-page-header-extra>
-    <button nz-button>
-      <i style="transform: rotate(-45deg);" nz-icon nzType="send"></i>
-      {{'PAGES.POST_WRITE.BUTTON_PUBLISH' |translate}}
-    </button>
-  </nz-page-header-extra>
-</nz-page-header>
-
-<form nz-form [formGroup]="postForm" class="post-form">
-  <nz-form-item>
-    <nz-form-label [nzSpan]="3" nzFor="title">{{'POST.TITLE' |translate}}</nz-form-label>
-    <nz-form-control [nzSpan]="12">
-      <input class="post-input-item" nz-input formControlName="title" id="title" />
-    </nz-form-control>
-  </nz-form-item>
-  <nz-form-item>
-    <nz-form-label [nzSpan]="3" nzFor="category">{{'POST.CATEGORY' |translate}}</nz-form-label>
-    <nz-form-control [nzSpan]="12">
-      <nz-select formControlName="category" id="category">
-        <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
-        <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
-      </nz-select>
-    </nz-form-control>
-  </nz-form-item>
-
-  <nz-form-item>
-    <nz-form-label [nzSpan]="3">{{'POST.TAGS' |translate}}</nz-form-label>
-    <nz-form-control [nzSpan]="12">
-      <nz-tag nzMode="closeable" [nzColor]="'magenta'">magenta</nz-tag>
-      <button nz-button  nzShape="circle" style="margin-left:10px;">
-        <i nz-icon nzType="plus"></i>
+<div class="g-flex-v" style="height: 100%;">
+  <nz-page-header>
+    <nz-page-header-title>
+      <i nz-icon nzType="clock-circle" nzTheme="outline" style="margin-right: 5px;"></i> Saved at: 2022-06-04 21:37:07
+    </nz-page-header-title>
+    <nz-page-header-footer>
+    </nz-page-header-footer>
+    <nz-page-header-extra>
+      <button nz-button (click)="publish()">
+        <i style="transform: rotate(-45deg);" nz-icon nzType="send"></i>
+        {{'PAGES.POST_WRITE.BUTTON_PUBLISH' |translate}}
       </button>
-    </nz-form-control>
-  </nz-form-item>
+    </nz-page-header-extra>
+  </nz-page-header>
+
+  <form nz-form [formGroup]="postForm" class="post-form">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="3" nzFor="title">{{'POST.TITLE' |translate}}</nz-form-label>
+      <nz-form-control [nzSpan]="12">
+        <input class="post-input-item" nz-input formControlName="title" id="title" />
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+      <nz-form-label [nzSpan]="3" nzFor="category">{{'POST.CATEGORY' |translate}}</nz-form-label>
+      <nz-form-control [nzSpan]="12">
+        <nz-select formControlName="category" id="category">
+          <nz-option nzValue="jack" nzLabel="Jack"></nz-option>
+          <nz-option nzValue="lucy" nzLabel="Lucy"></nz-option>
+        </nz-select>
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-label [nzSpan]="3">{{'POST.TAGS' |translate}}</nz-form-label>
+      <nz-form-control [nzSpan]="12">
+        <nz-tag nzMode="closeable" [nzColor]="'magenta'">magenta</nz-tag>
+        <button nz-button  nzShape="circle" style="margin-left:10px;">
+          <i nz-icon nzType="plus"></i>
+        </button>
+      </nz-form-control>
+    </nz-form-item>
 
 
-</form>
+  </form>
 
-<editor [(ngModel)]="content" [init]="tinyConfig"></editor>
+  <editor style="flex:1" [(ngModel)]="content" [init]="tinyConfig"></editor>
+</div>
+

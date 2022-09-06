@@ -12,6 +12,7 @@
         "POST_CREATE": "新建文章",
         "TAGS": "标签",
         "CATEGORIES": "类别",
+        "DRAFTS": "草稿",
         "SETTING": "设置"
       },
       "CREATE": "新建"
@@ -26,9 +27,13 @@
     "TAGS": {
       "TITLE": "标签"
     },
+    "CATEGORIES": {
+      "TITLE": "类别"
+    },
     "SETTING": {
       "TITLE": "设置",
       "DISPLAY_LANGUAGE": "显示语言",
+      "ABOUT_US": "关于我们",
       "ENABLE_PROXY": "启用代理",
       "PROXY_SERVER": "代理服务器",
       "ENABLE_IMAGE_HOSTING": "启用图床",

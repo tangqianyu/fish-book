@@ -8,7 +8,7 @@ import { PostWriteComponent } from './post/post-write/post-write.component';
 import { HeaderUserComponent, PageHeaderComponent } from './components';
 import { SettingComponent } from './setting/setting.component';
 import { TagsComponent } from './tags/tags.component';
-import { CategorysComponent } from './categorys/categorys.component';
+import { CategorysComponent } from './categories/categories.component';
 
 @NgModule({
   declarations: [
